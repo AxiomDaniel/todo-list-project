@@ -1,0 +1,91 @@
+body {
+  font-family: Roboto;
+  background: #2BC0E4;
+  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to left, #EAECC6, #2BC0E4);
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to left, #EAECC6, #2BC0E4);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+h1 {
+  background: steelblue;
+  color: white;
+  margin: 0;
+  padding: 10px 20px;
+  text-transform: uppercase;
+  font-size: 24px;
+  font-weight: normal;
+}
+
+input {
+  font-size: 18px;
+  background-color: #f7f7f7;
+  width: 100%;
+  padding: 13px 13px 13px 20px;
+  /* Padding args go clockwise starting from top */
+  /* Meaning top right bottom left */
+  box-sizing: border-box;
+  color: steelblue;
+  border: 1px solid rgba(0, 0, 0, 0);
+  /* The default input box has a sort of concave look around the border. If we add this invisible border, it removes it */
+}
+
+input:focus {
+  background: white;
+  border: 3px solid steelblue;
+  outline: none;
+}
+
+ul {
+  list-style: none;
+  /* This overwrites the bullet points provided by using default <li> */
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  height: 40px;
+  line-height: 40px;
+  color: #666;
+}
+
+li:hover span {
+  width: 40px;
+  opacity: 1;
+  /* In span, we set the width to 0, so once we hover, we get the button by increasing its width. We also need to set its opacity, if not, we can still see the trash can when not hovered over. */
+  transition: 0.2s linear;
+}
+
+li:nth-of-type(odd) {
+  background: white;
+}
+
+span {
+  background: red;
+  height: 40px;
+  margin-right: 20px;
+  text-align: center;
+  color: white;
+  width: 0;
+  display: inline-block;
+  opacity: 0;
+}
+
+.completedToDo {
+  color: gray;
+  text-decoration: line-through;
+}
+
+.fa-plus {
+  float: right;
+}
+
+#container {
+  width: 300px;
+  margin: 100px auto;
+  /* Before you add margin, you always gotta limit the width first. Because by default, the div runs the whole length of the page */
+  background: #f7f7f7;
+  -webkit-box-shadow: 0 0 3px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.1);
+}
